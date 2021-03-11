@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class homeController extends AbstractController
 {
@@ -14,5 +15,6 @@ class homeController extends AbstractController
      */
     public function homepage(UserRepository $repository)
     {
+        return $this->render('base.html.twig');
     }
 }
